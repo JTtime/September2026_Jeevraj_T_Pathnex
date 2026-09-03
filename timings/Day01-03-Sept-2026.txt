@@ -1,0 +1,8 @@
+Today I learnt linux commands with ls -l
+
+we see the tabular data of all the files
+
+and we studied details of all the columns like permission, hard links, owner name, time.
+Also how to sort the list as per size or time
+
+Seeing the same list in human readable format using -h flag
