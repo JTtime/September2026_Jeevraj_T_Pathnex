@@ -1,0 +1,9 @@
+Till Now I am able to setup AWS ec2 instance with linux
+
+successfully pushed my first code to github using ssh keygen created on ec2 instance
+
+practiced linux commands taught by Neeraj on ec2 instance linux
+
+tried understanding commands from devops l2 coding practice
+
+
