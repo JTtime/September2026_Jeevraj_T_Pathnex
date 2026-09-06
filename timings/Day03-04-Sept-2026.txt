@@ -1,0 +1,7 @@
+Today we learnt how to connect AWS EC2 instance with terraform
+
+so next time, we can just terraform apply and it will start EC2 instance directly
+
+I also learnt various process commands to monitor or kill particular process by IDs or by name
+
+I am also learning how to use find command efficiently with various parameters
