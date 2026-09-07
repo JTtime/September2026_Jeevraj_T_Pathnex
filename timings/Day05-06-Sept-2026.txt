@@ -1,0 +1,7 @@
+Today We started with git commands
+
+basics of git and how git works internally
+
+We explored whats inside .git and understood how git works under the hood
+
+during introduction evening meet, Neeraj  bhaiyya gave feedback that I must adjust my camera position
