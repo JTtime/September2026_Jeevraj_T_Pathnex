@@ -1,0 +1,7 @@
+Today We started AWS day 1
+
+We learnt the difference between in prem and cloud service providers
+
+then we are going through various services provided by AWS like EC2 instance, IAM role, VPC, S3, etc.
+
+under VPC, we learnt important concepts about public subnet and private subnet and how they have routing table and can be connected through internet gateway and NAT gateway respectively
