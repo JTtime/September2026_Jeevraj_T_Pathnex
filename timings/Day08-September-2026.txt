@@ -1,0 +1,7 @@
+Today I started reading books on AWS
+
+It helped me understand that I should divide any AWS services in core categories
+
+For every core category, AWS have multiple options
+
+today I also understood the structure of terraform for IAM role policy attachment
