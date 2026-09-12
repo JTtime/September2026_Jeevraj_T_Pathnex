@@ -1,0 +1,5 @@
+Today I learnt the core concepts of kubernetes and interview questions by Neeraj Bhaiyya
+
+We also did hands on with AWS EKS services
+
+I am trying to create mind map for Kubernetes control panel and worker node
