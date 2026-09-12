@@ -1,0 +1,7 @@
+Today I learnt OSI Model, Amazon security related services, database related services and lastly deployment related services
+
+
+As per intro script instructions, I created my own script and checking the timings if I can conclude it within 2 minutes
+
+
+
