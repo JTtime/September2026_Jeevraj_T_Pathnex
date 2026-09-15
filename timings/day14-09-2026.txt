@@ -1,0 +1,7 @@
+Today I learnt some hands on with apache server and troubleshooting
+
+I understood concept of PV, PVC and storageClass with statefulsets
+
+I also understood the concept of Affinity and Anti Affinity concept
+
+
