@@ -1,0 +1,8 @@
+Today we learnt about kubernetes replicasets, daemonsets and more hands on with AWS EKS
+
+
+I also personally learnt something about helm chart
+
+
+it offers readymade templates for kubernetes
+
