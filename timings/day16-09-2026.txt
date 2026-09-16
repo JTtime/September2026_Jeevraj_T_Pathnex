@@ -1,0 +1,8 @@
+today I have reading about terraform
+
+
+terraform up and running is a wonderful guide to learn IaaC concept
+
+compared to Ansible, Terraform looks good as I dont need to track changes to understand current state
+
+Terraform handles on its own
