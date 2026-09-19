@@ -1,0 +1,11 @@
+today we learnt about helm charts
+
+charts.yaml
+
+values.yaml
+
+helper.tpl file
+
+
+how values are fetched using dot notation from values.yaml to fetch configuration data and run helm commands to create kubernetes cluster
+
