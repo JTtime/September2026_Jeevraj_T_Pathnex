@@ -1,0 +1,5 @@
+today I did extended practice  on terraform
+
+I tried creating some local files with terraform
+
+I tried reading  book on terraform book which gave insights on infrastructure as code concept
