@@ -1,0 +1,6 @@
+
+revising terraform and comparing with ansible
+
+tried hands on for terraform as per video on aws
+
+revised kubernetes with aws eks
