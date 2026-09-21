@@ -1,0 +1,10 @@
+today I am learning ArgoCD
+
+ArgoCD makes automation of kubernetes deployment possible
+
+
+for single file or lesser files we use kubectl  directly
+for multiple files in single application, use helm chart
+
+for multiple applications, use ArgoCD
+
