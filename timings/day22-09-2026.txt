@@ -1,0 +1,10 @@
+today I learnt about Ansible
+
+I understood the difference between Ansible and Terraform
+
+Terraform is for infrastructure and Ansible is for configuration management, application deployment and task automation
+
+
+Ansible requires SSH for connection
+
+It doesnt requires agent on host machine or master machine
