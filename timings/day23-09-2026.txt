@@ -1,0 +1,9 @@
+today we learnt the concepts of CICD with Gitlab and Jenkins
+
+Got the solid intuition of converting terraform flow to Jenkins and CICD flow
+
+Understood groovy language and scripted pipeline
+
+today I also understand how do we get options in Build with parameters dropdown by setting choices of hostname with agent None
+
+
