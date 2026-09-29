@@ -1,0 +1,9 @@
+
+today I am learning about SSL TLS certficates
+
+
+I understood how security is taken care off while communicating over network
+
+I am also practicing more Kubernetes concept by hands on
+
+
