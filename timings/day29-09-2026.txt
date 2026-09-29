@@ -1,0 +1,11 @@
+
+today I learnt about SRE
+
+Key components of SRE are:
+SLA - Service level Agreement
+SLO - Service Level Objective, based on agreement.
+SLI - Service Level Indicators, based on SLO
+
+
+SLO is also used to decide Error budget using formula 100% - SLO
+
