@@ -1,0 +1,9 @@
+today I learnt about kafka
+
+concept of producers consumers and brokers
+
+I tried segregating the responsibilites of Devops versus developer for Kafka
+
+I also checked for alternative like RabbitMQ, AWS SQS, etc. and did cost versus complexity comparison
+
+
