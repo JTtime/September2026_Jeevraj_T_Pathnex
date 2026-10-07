@@ -1,0 +1,8 @@
+today I am revising aws concepts watching old cohort videos
+
+
+few extra points are discussed with july cohort
+
+I am trying to get the grip of what IAM roles provides and role of developer in it
+
+role of devops vs developer in IAM roles provisioning
