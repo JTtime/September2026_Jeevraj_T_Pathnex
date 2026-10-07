@@ -1,0 +1,6 @@
+today I created notes on terrform vs ansible
+
+I am trying to understand the power of terraform for setting up infrastructure
+
+fine tuned my introduction videos for interview practice
+
