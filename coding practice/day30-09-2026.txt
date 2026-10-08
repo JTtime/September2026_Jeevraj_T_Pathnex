@@ -1,3 +1,220 @@
+# 1. Ansible — Create pathnex-admin
+
+- name: Create Pathnex admin user
+  hosts: all
+  become: true
+
+  vars:
+    admin_user: pathnex-admin
+    ssh_key: "ssh-rsa AAAA_REPLACE_WITH_PUBLIC_KEY"
+
+  tasks:
+    - name: Create user
+      ansible.builtin.user:
+        name: "{{ admin_user }}"
+        shell: /bin/bash
+        create_home: true
+
+    - name: Add SSH key
+      ansible.posix.authorized_key:
+        user: "{{ admin_user }}"
+        key: "{{ ssh_key }}"
+
+# 2. Terraform — EC2 with Project tag
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+    }
+  }
+}
+
+provider "aws" {
+  region = "ap-south-1"
+}
+
+resource "aws_instance" "pathnex" {
+  ami           = "ami-abcd1234abcd1234"
+  instance_type = "t2.micro"
+
+  tags = {
+    Project = "Pathnex-Training"
+  }
+}
+
+
+
+# 3. Kubernetes — Deployment + ClusterIP
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pathnex-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pathnex-app
+  template:
+    metadata:
+      labels:
+        app: pathnex-app
+    spec:
+      containers:
+        - name: pathnex-app
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pathnex-app
+spec:
+  type: ClusterIP
+  selector:
+    app: pathnex-app
+  ports:
+    - port: 80
+      targetPort: 80
+4. Shell — Monitoring Menu
+
+
+#!/bin/bash
+
+echo "===== Monitoring Menu ====="
+echo "1) IP"
+echo "2) Disk"
+echo "3) Memory"
+
+read -p "Enter choice: " choice
+
+case "$choice" in
+  1)
+    hostname -I
+    ;;
+  2)
+    df -h
+    ;;
+  3)
+    free -h
+    ;;
+  *)
+    echo "Invalid choice"
+    ;;
+esac
+
+
+# 5. Jenkins Pipeline
+This combines the four tasks into a Declarative Pipeline.
+
+pipeline {
+    agent any
+
+    environment {
+        INSTITUTE_NAME = "Pathnex"
+        TEAM          = "DevOps"
+        ENV           = "prod"
+        PROJECT       = "Pathnex-Training"
+    }
+
+    stages {
+
+        stage('Infrastructure') {
+            steps {
+                echo "Creating ${PROJECT} infrastructure"
+
+                dir('terraform') {
+                    sh 'terraform init'
+                    sh 'terraform apply -auto-approve'
+                }
+            }
+        }
+
+        stage('App Deployment') {
+            steps {
+                echo "Deploying ${INSTITUTE_NAME} application"
+
+                dir('ansible') {
+                    sh 'ansible-playbook user.yml'
+                }
+
+                sh 'kubectl apply -f kubernetes/deployment.yml'
+            }
+        }
+
+        stage('Monitoring Checks') {
+            steps {
+                sh '''
+                    echo "===== Monitoring Menu ====="
+                    echo "1) IP"
+                    echo "2) Disk"
+                    echo "3) Memory"
+
+                    read -p "Enter choice: " choice
+
+                    case "$choice" in
+                      1) hostname -I ;;
+                      2) df -h ;;
+                      3) free -h ;;
+                      *) echo "Invalid choice" ;;
+                    esac
+                '''
+            }
+        }
+    }
+}
+
+
+# 6. GitLab CI
+Create .gitlab-ci.yml:
+
+variables:
+  INSTITUTE_NAME: "Pathnex"
+  TEAM: "DevOps"
+  ENV: "prod"
+  PROJECT: "Pathnex-Training"
+
+stages:
+  - infrastructure
+  - app_deployment
+  - monitoring_checks
+
+infrastructure:
+  stage: infrastructure
+  script:
+    - echo "Creating ${PROJECT} infrastructure"
+    - cd terraform
+    - terraform init
+    - terraform apply -auto-approve
+
+app_deployment:
+  stage: app_deployment
+  script:
+    - echo "Deploying ${INSTITUTE_NAME} application"
+    - cd ansible
+    - ansible-playbook user.yml
+    - cd ..
+    - kubectl apply -f kubernetes/deployment.yml
+
+monitoring_checks:
+  stage: monitoring_checks
+  script:
+    - |
+      echo "===== Monitoring Menu ====="
+      echo "1) IP"
+      echo "2) Disk"
+      echo "3) Memory"
+
+      read -p "Enter choice: " choice
+
+      case "$choice" in
+        1) hostname -I ;;
+        2) df -h ;;
+        3) free -h ;;
+        *) echo "Invalid choice" ;;
+      esac
 i# Day 30 — Final Project Submission and Review
 
 ## 🔹 Final Task — Deploy a Fully Integrated Pathnex Application with CI/CD Pipeline
