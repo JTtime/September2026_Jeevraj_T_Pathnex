@@ -1,0 +1,7 @@
+Today I learnt about zero downtime deployment
+
+I understood the concept with aws eks
+
+I am also practicing to deploy html file with nginx server with zero downtime concept
+
+I am also reading aws papers on zero down time deployment
