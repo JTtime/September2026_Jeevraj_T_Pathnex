@@ -1,0 +1,7 @@
+todays assignment was speed typing all the tasks which we practiced whole month
+
+I understood the structure of all the code
+
+now trying to rewrite everything from scratch
+
+need to revise ansible more with practice from scratch
