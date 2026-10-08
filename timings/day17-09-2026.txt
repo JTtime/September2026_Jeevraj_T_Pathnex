@@ -1,0 +1,6 @@
+I am practicing hands on with Linux on AWS Ubuntu
+
+I am also reading books on aws for exam prep, to understand AWS in depth for office work as well as for interview prep
+
+
+Tried various process and user management related commands for linux os
