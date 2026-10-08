@@ -1,0 +1,7 @@
+today I am practicing Linux questions for interview
+
+I also understood differences between key concepts like df du ls grep, egrep, pipe, etc
+
+pathnex interview questions served as great start for it
+
+knowledge gaps were filed by doubt resolution with chatgpt
