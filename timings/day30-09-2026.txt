@@ -5,3 +5,11 @@ I understood the structure of all the code
 now trying to rewrite everything from scratch
 
 need to revise ansible more with practice from scratch
+today I am revising aws concepts watching old cohort videos
+
+
+few extra points are discussed with july cohort
+
+I am trying to get the grip of what IAM roles provides and role of developer in it
+
+role of devops vs developer in IAM roles provisioning
